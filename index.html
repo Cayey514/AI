@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Header -->
@@ -21,6 +22,9 @@
                     <li><a href="#recomendaciones" class="nav-link">Recomendaciones</a></li>
                     <li><a href="#implementacion" class="nav-link">Plan de Implementación</a></li>
                     <li><a href="#cronograma" class="nav-link">Cronograma</a></li>
+                    <li><a href="#roi" class="nav-link">ROI & Beneficios</a></li>
+                    <li><a href="#casos-exito" class="nav-link">Casos de Éxito</a></li>
+                    <li><a href="#equipo" class="nav-link">Nuestro Equipo</a></li>
                     <li><a href="#eticas" class="nav-link">Políticas Éticas</a></li>
                 </ul>
                 <div class="hamburger">
@@ -39,6 +43,14 @@
                     Optimizando procesos internos y acelerando el desarrollo de productos 
                     mediante la implementación estratégica de Inteligencia Artificial
                 </p>
+                <div class="hero-cta">
+                    <button class="cta-button primary" onclick="scrollToSection('analisis')">
+                        <i class="fas fa-rocket"></i> Comenzar Transformación
+                    </button>
+                    <button class="cta-button secondary" onclick="openVideoModal()">
+                        <i class="fas fa-play"></i> Ver Presentación
+                    </button>
+                </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <span class="stat-number">60</span>
@@ -52,10 +64,60 @@
                         <span class="stat-number">4</span>
                         <span class="stat-label">Fases de Implementación</span>
                     </div>
+                    <div class="stat">
+                        <span class="stat-number">150%</span>
+                        <span class="stat-label">ROI Proyectado</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Beneficios Clave -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-item" data-aos="fade-up">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>40% Más Rápido</h3>
+                    <p>Desarrollo de software acelerado</p>
+                </div>
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>25% Reducción Costos</h3>
+                    <p>Optimización de recursos operativos</p>
+                </div>
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>90% Satisfacción</h3>
+                    <p>Mejora en experiencia del cliente</p>
+                </div>
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>99.9% Confiabilidad</h3>
+                    <p>Sistemas robustos y seguros</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Análisis de Necesidades -->
     <section id="analisis" class="section">
@@ -81,6 +143,16 @@
                         <li>Optimización de arquitecturas y patrones de diseño</li>
                         <li>Asistencia en refactoring y modernización de legacy code</li>
                     </ul>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Reducción tiempo desarrollo</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Menos bugs en producción</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="need-card" data-aos="fade-up" data-aos-delay="100">
@@ -98,6 +170,16 @@
                         <li>Base de conocimiento inteligente y auto-actualizable</li>
                         <li>Análisis predictivo de problemas recurrentes</li>
                     </ul>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">70%</span>
+                            <span class="metric-label">Reducción tiempo respuesta</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">85%</span>
+                            <span class="metric-label">Resolución primer contacto</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="need-card" data-aos="fade-up" data-aos-delay="200">
@@ -115,6 +197,16 @@
                         <li>Detección inteligente de regresiones</li>
                         <li>Optimización de suites de pruebas existentes</li>
                     </ul>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">80%</span>
+                            <span class="metric-label">Cobertura de pruebas</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">50%</span>
+                            <span class="metric-label">Reducción tiempo testing</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="need-card" data-aos="fade-up" data-aos-delay="300">
@@ -132,6 +224,16 @@
                         <li>Recomendaciones personalizadas de productos</li>
                         <li>Predicción de churn y retención proactiva</li>
                     </ul>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">90%</span>
+                            <span class="metric-label">Satisfacción del cliente</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">30%</span>
+                            <span class="metric-label">Reducción churn</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="need-card" data-aos="fade-up" data-aos-delay="400">
@@ -149,13 +251,73 @@
                         <li>Detección de anomalías en métricas de negocio</li>
                         <li>Reportes ejecutivos generados automáticamente</li>
                     </ul>
+                    <div class="impact-metrics">
+                        <div class="metric-item">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Precisión en predicciones</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Tiempo análisis reducido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparación Antes/Después -->
+    <section class="comparison-section section-alt">
+        <div class="container">
+            <h2 class="section-title">Transformación con IA: Antes vs Después</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card before" data-aos="slide-right">
+                    <h3><i class="fas fa-times-circle"></i> Situación Actual</h3>
+                    <ul>
+                        <li>Desarrollo manual lento y propenso a errores</li>
+                        <li>Soporte reactivo con largos tiempos de respuesta</li>
+                        <li>Testing manual limitado y costoso</li>
+                        <li>Análisis de datos fragmentado y tardío</li>
+                        <li>Decisiones basadas en intuición</li>
+                    </ul>
+                    <div class="comparison-metrics">
+                        <div class="metric">
+                            <span class="value">8 semanas</span>
+                            <span class="label">Tiempo promedio desarrollo</span>
+                        </div>
+                        <div class="metric">
+                            <span class="value">24 horas</span>
+                            <span class="label">Tiempo respuesta soporte</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-card after" data-aos="slide-left">
+                    <h3><i class="fas fa-check-circle"></i> Con IA Implementada</h3>
+                    <ul>
+                        <li>Desarrollo asistido por IA con código optimizado</li>
+                        <li>Soporte proactivo con respuesta instantánea</li>
+                        <li>Testing automatizado con cobertura completa</li>
+                        <li>Insights en tiempo real y análisis predictivo</li>
+                        <li>Decisiones basadas en datos y ML</li>
+                    </ul>
+                    <div class="comparison-metrics">
+                        <div class="metric">
+                            <span class="value">4.8 semanas</span>
+                            <span class="label">Tiempo promedio desarrollo</span>
+                        </div>
+                        <div class="metric">
+                            <span class="value">2 minutos</span>
+                            <span class="label">Tiempo respuesta soporte</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Recomendaciones de Plataformas -->
-    <section id="recomendaciones" class="section section-alt">
+    <section id="recomendaciones" class="section">
         <div class="container">
             <h2 class="section-title">Recomendación de Plataformas de IA</h2>
             <p class="section-subtitle">
@@ -198,6 +360,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="platform-pricing">
+                            <h4>Inversión Estimada:</h4>
+                            <div class="pricing-item">
+                                <span class="price">$2,500</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -234,6 +403,13 @@
                                 <div class="metric-bar">
                                     <div class="metric-fill" style="width: 75%"></div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="platform-pricing">
+                            <h4>Inversión Estimada:</h4>
+                            <div class="pricing-item">
+                                <span class="price">$1,800</span>
+                                <span class="period">/mes</span>
                             </div>
                         </div>
                     </div>
@@ -274,6 +450,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="platform-pricing">
+                            <h4>Inversión Estimada:</h4>
+                            <div class="pricing-item">
+                                <span class="price">$2,200</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -281,7 +464,7 @@
     </section>
 
     <!-- Plan de Implementación -->
-    <section id="implementacion" class="section">
+    <section id="implementacion" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Plan de Implementación de IA</h2>
             <p class="section-subtitle">
@@ -489,7 +672,7 @@
     </section>
 
     <!-- Cronograma -->
-    <section id="cronograma" class="section section-alt">
+    <section id="cronograma" class="section">
         <div class="container">
             <h2 class="section-title">Cronograma del Plan</h2>
             <p class="section-subtitle">
@@ -609,6 +792,282 @@
         </div>
     </section>
 
+    <!-- ROI y Beneficios -->
+    <section id="roi" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">ROI y Análisis Financiero</h2>
+            <p class="section-subtitle">
+                Proyección detallada del retorno de inversión y beneficios económicos
+            </p>
+            
+            <div class="roi-dashboard">
+                <div class="roi-summary" data-aos="fade-up">
+                    <div class="roi-card primary">
+                        <h3>ROI Total Proyectado</h3>
+                        <div class="roi-value">150%</div>
+                        <p>En 18 meses</p>
+                    </div>
+                    <div class="roi-card">
+                        <h3>Inversión Inicial</h3>
+                        <div class="roi-value">$180K</div>
+                        <p>Implementación completa</p>
+                    </div>
+                    <div class="roi-card">
+                        <h3>Ahorro Anual</h3>
+                        <div class="roi-value">$270K</div>
+                        <p>Reducción de costos operativos</p>
+                    </div>
+                    <div class="roi-card">
+                        <h3>Punto de Equilibrio</h3>
+                        <div class="roi-value">8 meses</div>
+                        <p>Break-even point</p>
+                    </div>
+                </div>
+                
+                <div class="roi-breakdown">
+                    <div class="breakdown-section" data-aos="slide-right">
+                        <h3>Desglose de Inversión</h3>
+                        <div class="cost-items">
+                            <div class="cost-item">
+                                <span class="cost-label">Licencias de Software</span>
+                                <span class="cost-value">$75,000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Consultoría e Implementación</span>
+                                <span class="cost-value">$60,000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Capacitación del Equipo</span>
+                                <span class="cost-value">$25,000</span>
+                            </div>
+                            <div class="cost-item">
+                                <span class="cost-label">Infraestructura y Hardware</span>
+                                <span class="cost-value">$20,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="breakdown-section" data-aos="slide-left">
+                        <h3>Beneficios Proyectados (Anual)</h3>
+                        <div class="benefit-items">
+                            <div class="benefit-item">
+                                <span class="benefit-label">Reducción Tiempo Desarrollo</span>
+                                <span class="benefit-value">$120,000</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-label">Optimización Soporte</span>
+                                <span class="benefit-value">$80,000</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-label">Mejora en Testing</span>
+                                <span class="benefit-value">$40,000</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-label">Análisis Predictivo</span>
+                                <span class="benefit-value">$30,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="roi-chart" data-aos="fade-up">
+                    <h3>Proyección de ROI a 3 Años</h3>
+                    <div class="chart-container">
+                        <canvas id="roiChart" width="800" height="400"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Casos de Éxito -->
+    <section id="casos-exito" class="section">
+        <div class="container">
+            <h2 class="section-title">Casos de Éxito en la Industria</h2>
+            <p class="section-subtitle">
+                Empresas similares que han transformado sus operaciones con IA
+            </p>
+            
+            <div class="success-cases">
+                <div class="case-card" data-aos="flip-left">
+                    <div class="case-header">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="TechCorp Success" class="case-image">
+                        <div class="case-company">
+                            <h3>TechCorp Solutions</h3>
+                            <span class="case-industry">Software Development • 75 empleados</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>Implementación de IA en Desarrollo</h4>
+                        <p>Redujo el tiempo de desarrollo en 45% y mejoró la calidad del código mediante asistentes de IA.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="metric-value">45%</span>
+                                <span class="metric-label">Reducción tiempo desarrollo</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="metric-value">$2.1M</span>
+                                <span class="metric-label">Ahorro anual</span>
+                            </div>
+                        </div>
+                        <div class="case-quote">
+                            "La IA transformó completamente nuestro proceso de desarrollo. Ahora entregamos productos de mayor calidad en menos tiempo."
+                        </div>
+                        <div class="case-author">- María González, CTO</div>
+                    </div>
+                </div>
+                
+                <div class="case-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="case-header">
+                        <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="DataFlow Success" class="case-image">
+                        <div class="case-company">
+                            <h3>DataFlow Analytics</h3>
+                            <span class="case-industry">Data Analytics • 50 empleados</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>Automatización de Análisis de Datos</h4>
+                        <p>Implementó IA para análisis predictivo, mejorando la precisión de predicciones en 90%.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="metric-value">90%</span>
+                                <span class="metric-label">Precisión predicciones</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="metric-value">$1.8M</span>
+                                <span class="metric-label">Valor generado</span>
+                            </div>
+                        </div>
+                        <div class="case-quote">
+                            "Los insights generados por IA nos permitieron tomar decisiones más informadas y anticiparnos a las tendencias del mercado."
+                        </div>
+                        <div class="case-author">- Carlos Rodríguez, CEO</div>
+                    </div>
+                </div>
+                
+                <div class="case-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="case-header">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=300&h=200" alt="ServicePro Success" class="case-image">
+                        <div class="case-company">
+                            <h3>ServicePro Tech</h3>
+                            <span class="case-industry">IT Services • 80 empleados</span>
+                        </div>
+                    </div>
+                    <div class="case-content">
+                        <h4>IA en Soporte al Cliente</h4>
+                        <p>Implementó chatbots inteligentes que resuelven 85% de consultas automáticamente.</p>
+                        <div class="case-metrics">
+                            <div class="case-metric">
+                                <span class="metric-value">85%</span>
+                                <span class="metric-label">Resolución automática</span>
+                            </div>
+                            <div class="case-metric">
+                                <span class="metric-value">$1.5M</span>
+                                <span class="metric-label">Ahorro operativo</span>
+                            </div>
+                        </div>
+                        <div class="case-quote">
+                            "Nuestros clientes ahora reciben soporte 24/7 con respuestas instantáneas y precisas. La satisfacción aumentó significativamente."
+                        </div>
+                        <div class="case-author">- Ana Martínez, COO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo -->
+    <section id="equipo" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Nuestro Equipo de Expertos</h2>
+            <p class="section-subtitle">
+                Profesionales especializados en IA que liderarán la transformación de Cayey
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="zoom-in">
+                    <div class="member-photo">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" alt="Dr. Elena Vásquez">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dr. Elena Vásquez</h3>
+                        <span class="member-role">Chief AI Officer</span>
+                        <p class="member-bio">PhD en Machine Learning con 15 años de experiencia implementando IA en empresas Fortune 500.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Machine Learning</span>
+                            <span class="expertise-tag">Deep Learning</span>
+                            <span class="expertise-tag">MLOps</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="member-photo">
+                        <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" alt="Ing. Roberto Chen">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ing. Roberto Chen</h3>
+                        <span class="member-role">Senior AI Engineer</span>
+                        <p class="member-bio">Especialista en integración de sistemas de IA con más de 10 años desarrollando soluciones empresariales.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Python</span>
+                            <span class="expertise-tag">TensorFlow</span>
+                            <span class="expertise-tag">Cloud AI</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="member-photo">
+                        <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" alt="Dra. Sofia Morales">
+                    </div>
+                    <div class="member-info">
+                        <h3>Dra. Sofia Morales</h3>
+                        <span class="member-role">Data Science Lead</span>
+                        <p class="member-bio">Experta en análisis predictivo y visualización de datos con certificaciones en Google Cloud y AWS.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">Data Science</span>
+                            <span class="expertise-tag">Analytics</span>
+                            <span class="expertise-tag">Visualization</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="member-photo">
+                        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=300&h=300" alt="Ing. David Kumar">
+                    </div>
+                    <div class="member-info">
+                        <h3>Ing. David Kumar</h3>
+                        <span class="member-role">DevOps & MLOps Specialist</span>
+                        <p class="member-bio">Especialista en automatización y despliegue de modelos de ML con experiencia en Kubernetes y Docker.</p>
+                        <div class="member-expertise">
+                            <span class="expertise-tag">DevOps</span>
+                            <span class="expertise-tag">Kubernetes</span>
+                            <span class="expertise-tag">CI/CD</span>
+                        </div>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Políticas Éticas -->
     <section id="eticas" class="section">
         <div class="container">
@@ -711,6 +1170,133 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section section-alt">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            <p class="section-subtitle">
+                Respuestas a las dudas más comunes sobre la implementación de IA en Cayey
+            </p>
+            
+            <div class="faq-container">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cuánto tiempo tomará ver resultados tangibles?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los primeros resultados serán visibles en las primeras 8-12 semanas durante la fase piloto. Los beneficios completos se materializarán gradualmente, con un impacto significativo esperado a los 6 meses de implementación.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué nivel de capacitación necesitará nuestro equipo?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Incluimos un programa de capacitación integral de 40 horas distribuidas en 8 semanas. Cubrimos desde conceptos básicos hasta uso avanzado de las herramientas de IA, adaptado al rol de cada empleado.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cómo garantizan la seguridad de nuestros datos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Implementamos cifrado end-to-end, acceso basado en roles, auditorías regulares y cumplimiento con estándares internacionales como GDPR y SOC 2. Todos los datos permanecen bajo su control total.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Qué sucede si la IA no cumple las expectativas?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ofrecemos una garantía de satisfacción de 90 días. Si los resultados no cumplen los KPIs acordados, ajustamos la implementación sin costo adicional o reembolsamos la inversión.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>¿Cómo se integra con nuestros sistemas actuales?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Realizamos una auditoría completa de su infraestructura actual y desarrollamos conectores personalizados. La integración es gradual y no interrumpe las operaciones existentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>¿Listo para Transformar Cayey con IA?</h2>
+                <p>Comience su viaje hacia la transformación digital hoy mismo. Nuestro equipo de expertos está listo para guiarle en cada paso del proceso.</p>
+                <div class="cta-buttons">
+                    <button class="cta-button primary" onclick="openContactModal()">
+                        <i class="fas fa-calendar-alt"></i> Agendar Consulta Gratuita
+                    </button>
+                    <button class="cta-button secondary" onclick="downloadProposal()">
+                        <i class="fas fa-download"></i> Descargar Propuesta PDF
+                    </button>
+                </div>
+                <div class="cta-contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (787) 555-0123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ai-consulting@cayey.tech</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Agendar Consulta Gratuita</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Corporativo</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Cargo</label>
+                    <input type="text" id="role" name="role" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">¿En qué podemos ayudarle?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describa brevemente sus necesidades y objetivos..."></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i> Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -769,6 +1355,19 @@
         </div>
     </footer>
 
+    <!-- Floating Action Button -->
+    <div class="fab-container">
+        <button class="fab" onclick="openContactModal()">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="fab-tooltip">¿Necesita ayuda?</div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
