@@ -1,7 +1,23 @@
-// Navegación móvil
+// Agregar verificación de autenticación al inicio del archivo
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger")
+  // Verificar autenticación
+  const isAuthenticated = localStorage.getItem("cayey_authenticated") !== "true"
+  if (isAuthenticated) {
+    window.location.href = "login.html"
+    return
+  }
+
+  // Agregar botón de logout al navbar
   const navMenu = document.querySelector(".nav-menu")
+  if (navMenu) {
+    const logoutItem = document.createElement("li")
+    logoutItem.innerHTML =
+      '<a href="#" class="nav-link" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>'
+    navMenu.appendChild(logoutItem)
+  }
+
+  // Resto del código existente...
+  const hamburger = document.querySelector(".hamburger")
   const navLinks = document.querySelectorAll(".nav-link")
 
   // Toggle del menú móvil
@@ -343,3 +359,61 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("🚀 Cayey AI Proposal - Página cargada exitosamente")
   console.log("💡 Funcionalidades activas: Navegación suave, animaciones, contadores, modo oscuro")
 })
+
+// Agregar función de logout
+function logout() {
+  localStorage.removeItem("cayey_authenticated")
+  localStorage.removeItem("cayey_login_time")
+  window.location.href = "login.html"
+}
+
+// Agregar funciones para los modales y botones del hero
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId)
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" })
+  }
+}
+
+function openVideoModal() {
+  document.getElementById("videoModal").style.display = "block"
+}
+
+function closeVideoModal() {
+  document.getElementById("videoModal").style.display = "none"
+}
+
+function openContactModal() {
+  document.getElementById("contactModal").style.display = "block"
+}
+
+function closeContactModal() {
+  document.getElementById("contactModal").style.display = "none"
+}
+
+function downloadProposal() {
+  // Simular descarga de PDF
+  const link = document.createElement("a")
+  link.href = "#"
+  link.download = "Cayey_AI_Proposal.pdf"
+  link.click()
+
+  // Mostrar mensaje de confirmación
+  alert("La descarga del PDF comenzará en breve. Gracias por su interés en nuestra propuesta de IA.")
+}
+
+function toggleFAQ(element) {
+  const faqItem = element.parentElement
+  const answer = faqItem.querySelector(".faq-answer")
+  const icon = element.querySelector("i")
+
+  faqItem.classList.toggle("active")
+
+  if (faqItem.classList.contains("active")) {
+    answer.style.maxHeight = answer.scrollHeight + "px"
+    icon.style.transform = "rotate(180deg)"
+  } else {
+    answer.style.maxHeight = "0"
+    icon.style.transform = "rotate(0deg)"
+  }
+}
